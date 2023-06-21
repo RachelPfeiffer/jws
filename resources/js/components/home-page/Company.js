@@ -22,7 +22,7 @@ function Company() {
                     <img src="img/verified.png" alt="" />
                     <h3>Latest Techniques</h3>
                     <p>
-                        Course material includes Red Cross standards for 2019.
+                        Course material includes Red Cross standards for {new Date().getFullYear()}.
                     </p>
                 </div>
             </div>

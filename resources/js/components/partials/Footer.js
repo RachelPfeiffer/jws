@@ -7,7 +7,7 @@ function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <p className="text-muted">©  { new Date().getFullYear() } Company, Inc.</p>
+                        <p className="text-muted">©  { new Date().getFullYear() } Jerusalem Water Safety, Inc.</p>
                     </div>
                 </div>
             </div>

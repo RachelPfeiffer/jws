@@ -16,6 +16,7 @@ function Courses() {
 
     return (
         <div className="container">
+            <h2 className="text-center text-uppercase fw-bold mb-3">Which certification do you need?</h2>
             <div className="row">
                 {courses.map(course => {
                     return (
