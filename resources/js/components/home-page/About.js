@@ -9,7 +9,7 @@ function About() {
                 <hr className="my-4" />
                 <p className="lead">We offer all the courses you need to become a lifeguard, lifeguard instructor, certified First Aid professional, and more! Check out our current course offerings below or contact us to ask about a custom course for your group!</p>
                 <h2 className="text-uppercase">We Teach:</h2>
-                <ul className="list-unstyled text-left">
+                <ul className="text-left">
                     <li>Lifeguarding</li>
                     <li>Lifeguard Refresher</li>
                     <li>WSI (Swimming Instructor)</li>

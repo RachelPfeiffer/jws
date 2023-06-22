@@ -6,3 +6,7 @@
     <div id="home-about"></div>
     <div id="home-company"></div>
 @endsection
+
+@section('scripts')
+    <script src="{{ asset('js/app.js') }}" defer></script>
+@endsection

@@ -27,7 +27,7 @@ function Courses() {
                 })}
             </div>
             <div className="row">
-                <p>Don't see the course you need? No worries! Contact us and we'll let you know if we offer your certification.</p>
+                <p className="pt-3">Don't see the course you need? No worries! Contact us and we'll let you know if we offer your certification.</p>
             </div>
         </div>
     );

@@ -1,19 +1,11 @@
-@extends('adminlte::page')
-
-@section('title', 'Dashboard')
-
-@section('content_header')
-    <h1>Dashboard</h1>
-@stop
+@extends('layouts.app')
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
-@stop
+    <div id="root"></div>
+    here's some more content
+@endsection
 
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
+@section('scripts')
+    <script src="{{ asset('js/admin/app.js') }}" defer></script>
 
-@section('js')
-    <script> console.log('Hi!'); </script>
-@stop
+@endsection
