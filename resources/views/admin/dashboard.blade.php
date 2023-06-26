@@ -2,7 +2,6 @@
 
 @section('content')
     <div id="root"></div>
-    here's some more content
 @endsection
 
 @section('scripts')

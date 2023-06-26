@@ -51,11 +51,11 @@ const Create = () => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="ageRequirement">Age Requirement</label>
-                    <input type="text" className="form-control" id="ageRequirement" value={course.ageRequirement} onChange={e => setCourse({...course, ageRequirement: e.target.value})} />
+                    <input type="text" className="form-control" id="ageRequirement" value={course.age_requirement} onChange={e => setCourse({...course, age_requirement: e.target.value})} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="skillsTaught">Skills Taught</label>
-                    <input type="text" className="form-control" id="skillsTaught" value={course.skillsTaught} onChange={e => setCourse({...course, skillsTaught: e.target.value})} />
+                    <textarea type="text" className="form-control" id="skillsTaught" value={course.skills_taught} onChange={e => setCourse({...course, skills_taught: e.target.value})} ></textarea>
                 </div>
                 <div className="form-group">
                     <label htmlFor="hours">Hours</label>

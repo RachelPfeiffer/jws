@@ -12,9 +12,10 @@ const EditCourse = props => {
         title: '',
         description: '',
         price: '',
-        skillsTaught: '',
+        skills_taught: '',
         hours: '',
-        icon: ''
+        icon: '',
+        age_requirement: ''
     };
 
     const [course, setCourse] = useState(initialCourseState);
@@ -43,12 +44,12 @@ const EditCourse = props => {
         event.preventDefault();
         const data = {
             title: course.title,
-
             description: course.description,
             price: course.price,
-            skillsTaught: course.skills_taught,
+            skills_taught: course.skills_taught,
             hours: course.hours,
-            icon: course.icon
+            icon: course.icon,
+            age_requirement: course.age_requirement
         };
 
         fetch(`/api/courses/${id}`, {
@@ -101,8 +102,12 @@ const EditCourse = props => {
                     <input type="text" className="form-control" id="price" required defaultValue={course.price} onChange={handleInputChange} name="price" />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="skillsTaught">Skills Taught</label>
-                    <input type="text" className="form-control" id="skillsTaught" required defaultValue={course.skills_taught} onChange={handleInputChange} name="skillsTaught" />
+                    <label htmlFor="age_requirement">Minimum Age</label>
+                    <input type="text" className="form-control" id="price" required defaultValue={course.age_requirement} onChange={handleInputChange} name="age_requirement" />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="skills_taught">Skills Taught</label>
+                    <textarea type="text" className="form-control" id="skills_taught" required defaultValue={course.skills_taught} onChange={handleInputChange} name="skills_taught" ></textarea>
                 </div>
 
                 <div className="form-group">
