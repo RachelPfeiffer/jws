@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const Layout = () => {
     return (
         <div>
-            boker tov to me
             <nav>
                 <ul>
                     <li>

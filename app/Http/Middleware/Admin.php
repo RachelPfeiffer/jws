@@ -19,7 +19,7 @@ class Admin extends Middleware
         if (Auth::user()->role == 'admin') {
             return $next($request);
         } else {
-            return redirect('/dashboard');
+            return redirect('/');
         }
     }
 }
