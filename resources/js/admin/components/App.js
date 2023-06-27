@@ -6,7 +6,9 @@ import Students from "./Students";
 import Courses from "./Courses/Index";
 import CreateCourse from "./Courses/Create";
 import EditCourse from "./Courses/Edit";
-import Cycles from "./Cycles";
+import Cycles from "./Cycles/Index";
+import CreateCycle from "./Cycles/Create";
+import EditCycle from "./Cycles/Edit";
 import PageNotFound from "./PageNotFound";
 
 const App = () => {
@@ -19,10 +21,13 @@ const App = () => {
                         <Route path="/admin/" element={<Dashboard />} />
                         <Route path="/admin/students" element={<Students />} />
                         <Route path="/admin/courses" element={<Courses />} />
-                        <Route path="/admin/course/create" element={<CreateCourse />} />
+                        <Route path="/admin/courses/create" element={<CreateCourse />} />
+                        <Route path="/admin/courses/:id" element={<EditCourse />} />
+                        <Route path="/admin/courses/:id/edit" element={<EditCourse />} />
                         <Route path="/admin/cycles" element={<Cycles />} />
-                        <Route path="/admin/course/:id" element={<EditCourse />} />
-                        <Route path="/admin/course/:id/edit" element={<EditCourse />} />
+                        <Route path="/admin/cycles/create" element={<CreateCycle />} />
+                        <Route path="/admin/cycles/:id" element={<EditCycle />} />
+                        <Route path="/admin/cycles/:id/edit" element={<EditCycle />} />
                         <Route path="/admin/*" element={<PageNotFound />} />
                     </Routes>
                 </div>

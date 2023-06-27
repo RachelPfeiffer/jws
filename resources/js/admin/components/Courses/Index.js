@@ -26,7 +26,7 @@ const Courses = () => {
     return (
         <div className="main-content">
             <h1>Courses</h1>
-            <Link to="/admin/course/create" className="btn btn-primary">Create Course</Link>
+            <Link to="/admin/courses/create" className="btn btn-primary">Create Course</Link>
             <table className="table table-striped">
                 <thead>
                 <tr>
@@ -39,10 +39,10 @@ const Courses = () => {
                 {courses.map(course => {
                     return (
                         <tr key={course.id}>
-                            <td><Link to={`/admin/course/${course.id}`}>{course.title}</Link></td>
+                            <td><Link to={`/admin/courses/${course.id}`}>{course.title}</Link></td>
                             <td>{course.description}</td>
                             <td>{course.price}</td>
-                            <td><Link to={`/admin/course/${course.id}/edit`} className="btn btn-primary">Edit</Link></td>
+                            <td><Link to={`/admin/courses/${course.id}/edit`} className="btn btn-primary">Edit</Link></td>
                             <td><button className="btn btn-danger" onClick={() => handleDelete(course.id)}>Delete</button></td>
                         </tr>
                     );
