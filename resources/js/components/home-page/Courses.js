@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CourseCard from './CourseCard';
+import { Link } from 'react-router-dom';
 
 function Courses() {
     const [courses, setCourses] = useState([]);
@@ -16,21 +17,21 @@ function Courses() {
 
     return (
         <div className="container">
-            <h2 className="text-center text-uppercase fw-bold mb-3">Which certification do you need?</h2>
-            <div className="row">
-                {courses.map(course => {
+            <div className="row g-3">
+                {courses.slice(0,6).map(course => {
                     return (
-                        <div className="col-sm-4" key={course.id}>
+                        <div className="col-sm-4" key={course.id} style={{}}>
                             <CourseCard course={course} />
                         </div>
                     );
                 })}
             </div>
             <div className="row">
-                <p className="pt-3">Don't see the course you need? No worries! Contact us and we'll let you know if we offer your certification.</p>
+                <a className="btn btn-primary" style={{display: "block", width: "350px", margin: "30px auto", textTransform: "uppercase", fontSize: "17px"}} href="/courses">All Courses</a>
             </div>
         </div>
     );
 }
 
 export default Courses;
+

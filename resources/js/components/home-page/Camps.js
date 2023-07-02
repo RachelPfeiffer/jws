@@ -8,7 +8,7 @@ const Camps = () => {
                 <h3 className="text-center text-uppercase p-5">Our Graduates Work In Jewish Camps Everywhere!</h3>
             <div className="row p-5">
                 {camps.map((camp) => (
-                    <div className="col-sm-2 text-center">
+                    <div key={camp} className="col-sm-2 text-center">
                         <img src={"img/logos/" + camp} />
                     </div>
                 ))}

@@ -20,7 +20,8 @@ const EditCycle = props => {
         fetch(`/api/cycles/${id}`)
             .then((response) => {
                 return response.json().then((response) => {
-                    setCycle(response.data);
+                    console.log(response);
+                    setCycle(response.data.cycle);
                 })
 
                     .catch(e => {
@@ -84,7 +85,7 @@ const EditCycle = props => {
             <form>
                 <div className="form-group">
                     <label htmlFor="location">Location</label>
-                    <select className="form-control" id="location" name="location" value={cycle.location} onChange={handleInputChange}>
+                    <select className="form-control" id="location" name="location" value={cycle.location || ''} onChange={handleInputChange}>
                         <option></option>
                         <option>Brooklyn</option>
                         <option>Teaneck</option>
@@ -97,7 +98,7 @@ const EditCycle = props => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="course_id">Course</label>
-                    <select className="form-control" id="course_id" name="course_id" value={cycle.course_id} onChange={handleInputChange}>
+                    <select className="form-control" id="course_id" name="course_id" value={cycle.course_id || ''} onChange={handleInputChange}>
                         <option></option>
                         {courses.map(course => {
                             return <option key={course.id} value={course.id}>{course.title}</option>;
@@ -106,7 +107,7 @@ const EditCycle = props => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="start_date">Start Date</label>
-                    <input type="date" className="form-control" id="start_date" name="start_date" value={cycle.start_date} onChange={handleInputChange} />
+                    <input type="date" className="form-control" id="start_date" name="start_date" value={cycle.start_date || ''} onChange={handleInputChange} />
                 </div>
                 <button onClick={updateCycle} className="btn btn-primary"> Update Cycle</button>
 
